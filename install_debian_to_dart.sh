@@ -13,14 +13,14 @@ git clone https://github.com/varigit/debian-var.git -b debian_jessie_varsommx6_v
 cd ~/var_som_mx6_debian
 ./make_var_som_mx6_debian.sh -c deploy
 
-sudo ./make_var_som_mx6_debian.sh -c all | tee 2.log
+#sudo ./make_var_som_mx6_debian.sh -c all | tee 2.log
 
-#sudo ./make_var_som_mx6_debian.sh -c bootloader
-#sudo ./make_var_som_mx6_debian.sh -c kernel
-#sudo ./make_var_som_mx6_debian.sh -c modules
-#sudo ./make_var_som_mx6_debian.sh -c rootfs
-#sudo ./make_var_som_mx6_debian.sh -c rtar
+sudo ./make_var_som_mx6_debian.sh -c bootloader
+sudo ./make_var_som_mx6_debian.sh -c kernel
+sudo ./make_var_som_mx6_debian.sh -c modules
+sudo ./make_var_som_mx6_debian.sh -c rootfs
+sudo ./make_var_som_mx6_debian.sh -c rtar
 
-#sudo ./make_var_som_mx6_debian.sh -c sdcard -d /dev/sdX
+sudo ./make_var_som_mx6_debian.sh -c sdcard -d /dev/sdc
 
 
