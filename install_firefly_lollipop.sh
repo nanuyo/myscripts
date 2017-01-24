@@ -1,3 +1,6 @@
+#!/bin/sh
+sudo timedatectl set-timezone Asia/Seoul
+
 sudo apt-get update
 sudo apt-get install openjdk-7-jdk
 sudo update-alternatives --config java
