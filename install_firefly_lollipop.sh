@@ -1,7 +1,9 @@
-#!/bin/sh
-sudo timedatectl set-timezone Asia/Seoul
+Don't run it, just command step by step
 
+sudo timedatectl set-timezone Asia/Seoul
 sudo apt-get update
+sudo apt-get install openssh-server
+
 sudo apt-get install openjdk-7-jdk
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
