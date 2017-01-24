@@ -15,5 +15,11 @@ tar xf ~/firefly-rk3288_android5.1_git_20150910.tar
 git reset --hard
 # git remote add bitbucket https://bitbucket.org/T-Firefly/firenow-lollipop.git
 git pull bitbucket Firefly-RK3288:Firefly-RK3288
+
+cd ~/firefly-rk3288-lollipop/kernel
+make firefly-rk3288_defconfig
+make -j8 firefly-rk3288.img
+
+cd ..
 . build.sh
 make -j8
