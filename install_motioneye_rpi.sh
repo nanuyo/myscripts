@@ -1,3 +1,5 @@
+sudo modprobe bcm2835-v4l2
+
 sudo apt-get -y update
 sudo apt-get -y install ffmpeg v4l-utils
 sudo apt-get -y install libmariadbclient18 libpq5
