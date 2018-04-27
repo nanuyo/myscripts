@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo modprobe bcm2835-v4l2
+
 lxterminal -e bash -c 'cd /home/pi/Desktop/alexa-avs-sample-app/samples/companionService && npm start ; exec bash' &
 sleep 20
 lxterminal -e bash -c 'cd /home/pi/Desktop/alexa-avs-sample-app/samples/javaclient && mvn exec:exec ; exec bash' &
