@@ -9,6 +9,12 @@ sudo apt install -y samba
 sudo smbpasswd -a hjpark
 sudo cp /etc/samba/smb.conf ~
 sudo gedit /etc/samba/smb.conf
+#[files]
+#	comment = hjpark home
+#	path = /home/hjpark
+#	writeable = yes
+#	browseable = yes
+#	valid users = hjpark, root
 sudo service smbd restart
 
 sudo apt-get install -y nfs-common nfs-kernel-server portmap
