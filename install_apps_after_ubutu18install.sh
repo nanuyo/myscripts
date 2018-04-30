@@ -38,6 +38,7 @@ sudo git config --global user.name "hjpark"
 
 #nvidia driver 설치
 sudo apt-get install -y nvidia-352
+#KVM permisiion for AndroidStudio
 sudo apt install qemu-kvm cpu-checker
 kvm-ok
 sudo addgroup kvm
