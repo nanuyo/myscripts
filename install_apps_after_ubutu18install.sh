@@ -1,5 +1,11 @@
 sudo su -
+
+add-apt-repository ppa:stebbins/handbrake-releases
 apt update
+apt-get install handbrake-gtk
+
+
+
 apt install -y openssh-server
 apt install -y samba
 smbpasswd -a hjpark
