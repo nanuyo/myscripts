@@ -13,8 +13,10 @@ sudo service smbd restart
 
 sudo apt-get install -y nfs-common nfs-kernel-server portmap
 sudo chmod 777 /home/hjpark/
-sudo mkdir /media/hjpark/nfs-ims-imslab
+sudo mkdir /home/hjpark/nfs-ims-imslab
+sudo mkdir /home/hjpark/WD2TB
 sudo gedit /etc/fstab
+#/dev/sdb1     /home/hjpark/WD2TB ntfs defaults 1 2
 #192.168.0.250:/imslab /home/hjpark/nfs-ims-imslab/  nfs rsize=8192,wsize=8192,timeo=14,intr,bg
 sudo mount -a
 
