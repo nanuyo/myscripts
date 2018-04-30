@@ -1,40 +1,36 @@
-sudo su -
-
-add-apt-repository ppa:stebbins/handbrake-releases
-apt update
-apt-get install handbrake-gtk
+sudo add-apt-repository ppa:stebbins/handbrake-releases
+sudo apt update
+sudo apt-get install handbrake-gtk
 
 
 
-apt install -y openssh-server
-apt install -y samba
-smbpasswd -a hjpark
-cp /etc/samba/smb.conf ~
-echo "[files]" >> /etc/samba/smb.conf
-echo "comment = hj ims pc" >> /etc/samba/smb.conf
-echo "path = /home/hjpark" >> /etc/samba/smb.conf
-echo "writeable = yes" >> /etc/samba/smb.conf
-echo "browseable = yes" >> /etc/samba/smb.conf
-echo "valid users = hjpark, root" >> /etc/samba/smb.conf
-service smbd restart
+sudo apt install -y openssh-server
+sudo apt install -y samba
+sudo smbpasswd -a hjpark
+sudo cp /etc/samba/smb.conf ~
+sudo echo "[files]" >> /etc/samba/smb.conf
+sudo echo "comment = hj ims pc" >> /etc/samba/smb.conf
+sudo echo "path = /home/hjpark" >> /etc/samba/smb.conf
+sudo echo "writeable = yes" >> /etc/samba/smb.conf
+sudo echo "browseable = yes" >> /etc/samba/smb.conf
+sudo echo "valid users = hjpark, root" >> /etc/samba/smb.conf
+sudo service smbd restart
 
-apt-get install -y nfs-common nfs-kernel-server portmap
-chmod 777 /home/hjpark/
+sudo apt-get install -y nfs-common nfs-kernel-server portmap
+sudo chmod 777 /home/hjpark/
 
-mkdir /media/hjpark/nfs-ims-file-server
-mkdir /media/hjpark/WD2TB
+sudo mkdir /media/hjpark/nfs-ims-file-server
+sudo mkdir /media/hjpark/WD2TB
 
-echo "192.168.0.250:/imslab /home/hjpark/nfs-ims-file-server/  nfs rsize=8192,wsize=8192,timeo=14,intr,bg" >> /etc/fstab
-echo "/dev/sdb1     /media/hjpark/WD2TB ntfs defaults 1 2" >> /etc/fstab
-mount -a
+sudo echo "192.168.0.250:/imslab /home/hjpark/nfs-ims-file-server/  nfs rsize=8192,wsize=8192,timeo=14,intr,bg" >> /etc/fstab
+sudo echo "/dev/sdb1     /media/hjpark/WD2TB ntfs defaults 1 2" >> /etc/fstab
+sudo mount -a
 
 
 #midnight commander
-apt install -y mc
-apt install -y fslint
-apt install -y filezilla
-apt install -y git
-git config --global user.email "hjparkg71@gmail.com"
-git config --global user.name "hjpark"
-
-su - hjpark
+sudo apt install -y mc
+sudo apt install -y fslint
+sudo apt install -y filezilla
+sudo apt install -y git
+sudo git config --global user.email "hjparkg71@gmail.com"
+sudo git config --global user.name "hjpark"
