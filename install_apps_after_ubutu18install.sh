@@ -34,3 +34,15 @@ sudo apt install -y filezilla
 sudo apt install -y git
 sudo git config --global user.email "hjparkg71@gmail.com"
 sudo git config --global user.name "hjpark"
+
+
+#nvidia driver 설치
+sudo apt-get install -y nvidia-352
+sudo apt install qemu-kvm cpu-checker
+kvm-ok
+sudo addgroup kvm
+sudo usermod -a -G kvm hjpark
+sudo chgrp kvm /dev/kvm
+sudo echo "KERNEL==\"kvm\", GROUP=\"kvm\", MODE=\"0660\"" >> /etc/udev/rules.d/60-qemu-kvm.rules
+
+reboot
